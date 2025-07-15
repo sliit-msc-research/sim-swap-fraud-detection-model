@@ -6,7 +6,7 @@ Data Set Definition
 | Field Name                        | Description |
 |----------------------------------|-------------|
 | `sim_swap_time_gap_minutes`      | The time difference in minutes between the last SIM change and the current OTP request.<br>💡 A **low value** (e.g., 1–2 mins) may indicate a fraud attempt, as fraudsters typically request OTPs shortly after swapping the SIM. |
-| `sim_swap_flag`                  | A boolean label indicating whether the record is a **confirmed SIM swap fraud case** (`true`) or not (`false`). Used as the ground truth for training/evaluation. |
+| `sim_swap_flag`                  | A boolean label indicating whether the last network record is a **confirmed SIM swap**. Used as the ground truth for training/evaluation. |
 | `device_change_flag`             | Indicates whether the **device (e.g., IMEI)** has changed compared to historical records.<br>💡 `true` = suspicious if changed along with SIM. |
 | `sim_type_change_flag`           | Indicates whether the **type of SIM** (e.g., physical to eSIM) changed.<br>💡 May signal fraud or just a legitimate upgrade — needs correlation. |
 | `imsi_change_flag`               | IMSI = International Mobile Subscriber Identity. A change indicates the user **swapped SIMs**. |
