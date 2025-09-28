@@ -24,3 +24,10 @@ Data Set Definition
 | `1,true,true,true,true,true,2`                | **Extreme case**: 1-minute gap, all identity-related fields changed, and locations very far apart. ➤ **High fraud risk**. |
 | `10080,false,false,false,false,false,10`      | SIM change occurred 1 week ago, no other changes, OTP came from same location. ➤ **Very safe behavior**. |
 
+
+# how to run the code
+To run the code, follow these steps:
+navigate to the api directory and execute the following command:
+
+```bash
+python -m uvicorn api_server_v2:app --reload
